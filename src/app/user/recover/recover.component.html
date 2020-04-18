@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="/">Meeting Scheduler</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  
+      <span class="navbar-toggler-icon"></span>
+  
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <ul class="navbar-nav">
+  
+        <li class="nav-item">
+  
+          <a class="nav-link" (click)="goToLogin()">Log-In</a>
+  
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+  </nav>
+  
+  <div class="row p-0 m-0">
+  
+    <div class="col-sm"></div>
+  
+    <div class="col-sm p-5">
+  
+      <h2 class="form-signin-heading">Please Enter Your Registered Email Id</h2>
+      <p class="form-signin-heading" style="color:red">(Password Will be Sent To This Email)</p>
+      <br>
+      <label for="inputEmail" class="sr-only">Email address</label>
+  
+      <input type="email" id="inputEmail" class="form-control" [(ngModel)]="email" placeholder="Email address" required
+        autofocus>
+  
+      <br>
+      <br>
+      <label for="inputEmail" class="sr-only">Confirm Email address</label>
+  
+      <input type="email" id="inputEmail" class="form-control" [(ngModel)]="confirmEmail"
+        placeholder="Confirm Email address" required autofocus>
+  
+      <br>
+  
+      <button class="btn btn-lg btn-primary btn-block" type="button" (click)="recoverPassFunction()">Recover
+        Password</button>
+  
+    </div>
+  
+    <div class="col-sm"></div>
+  
+  </div>

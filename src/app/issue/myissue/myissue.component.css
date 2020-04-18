@@ -1,0 +1,70 @@
+.pagination.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+  }
+  .heading{
+    color:orangered;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size:x-large;
+    text-align: center;
+    background-color: black;
+    padding:5px;
+}
+.issueview{
+    padding:5px;
+    border-color:black;
+    border-style:solid;
+}
+.commentsview{
+    padding:5px;
+    border-color:black;
+    border-style:solid;}
+.watchersview{
+    padding:5px;
+    border-color:black;
+    border-style:solid;
+}
+.comment{
+    font-size: x-small;
+    border-color: olivedrab;
+    border-radius: 0ch;
+    padding:2px;
+}
+.comment1{
+    font-size:medium;
+    color: black;
+    border-color:green ;
+    padding:1px;
+    border-style: initial;
+
+}
+.back{
+    background-color: burlywood;
+}
+
+.commentbutton{
+    float: center;
+}
+.heading1{
+    color:orangered;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+    text-align: center;
+    padding:5px;
+}
+
+.p1{
+    color:black;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+    font-size:medium;
+    padding:5px;
+}
+.p2{
+    padding:5px;
+}

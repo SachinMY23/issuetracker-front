@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="/">Issue Tracker</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  
+      <span class="navbar-toggler-icon"></span>
+  
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item">
+  
+          <a class="nav-link" (click)="goBack()">Go Back</a>
+  
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+  </nav>
+  <br/>
+ 
+  <div class="container">
+    <div class="heading">Personal Dashboard</div>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+       
+        <button class="btn btn-outline-success" (click)="sortByDate()">SortDate</button>
+        <button class="btn btn-outline-success" (click)="sortByTitle()">SortTitle</button>
+        <button class="btn btn-outline-success" (click)="sortByReporterName()">SortReporter</button>
+        <button class="btn btn-outline-success" (click)="sortByStatus()">SortStatus</button>
+      </form>
+    </nav>
+    <table class="table table-borderless table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Status</th>
+            <th scope="col">Date</th>
+            <th scope="col">Reporter</th>
+            <th scope="col">View</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let issue of allIssues">
+          <tr *ngIf="issue!==null">
+            <td>{{issue.title}}</td>
+            <td>{{issue.status}}</td>
+            <td>{{issue.createdOn | date}}</td>
+            <td>{{issue.reporterName}}</td>
+            <td><a class="nav-link" [routerLink]="['/issueview',issue.issueId]">open</a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+  </div>
+  <div class="container" >
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"  *ngIf="previousButton===true" >
+        <a class="page-link"  (click)="getPreviousIssues()" type="button">Previous</a>
+      </li>
+      <li class="page-item" *ngIf="nextButton===true">
+        <a class="page-link" (click)="getMoreIssues()" type="button">Next</a>
+      </li>
+    </ul>
+  </nav>
+  </div>
+ 
